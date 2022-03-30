@@ -3,7 +3,9 @@ package pruebas;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Iterator;
 
 /*
  * raul moreno martinez
@@ -17,7 +19,10 @@ public class Ejercicio_Hibernate {
 		if (establecerConexion() == 0) {
 			try {
 				PreparedStatement ps = conexion.prepareStatement("SELECT * FROM nttdata_mysql_soccer_team");
-				ResultSet resultado = 
+				ResultSet resultado = ps.executeQuery();
+				for (int i = 0; i < resultado.getRow(); i++) {
+					
+				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
