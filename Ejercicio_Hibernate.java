@@ -16,7 +16,8 @@ public class Ejercicio_Hibernate {
 		
 		if (establecerConexion() == 0) {
 			try {
-				PreparedStatement prepareStatement = conexion.prepareStatement("");
+				PreparedStatement ps = conexion.prepareStatement("SELECT * FROM nttdata_mysql_soccer_team");
+				ResultSet resultado = 
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
